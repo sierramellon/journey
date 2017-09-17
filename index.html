@@ -1,0 +1,194 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Ominfood is a premium food delivery service with the mission to bring affordable and healthy meals to as many people as possible.">
+        
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <title>REI Journey</title>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/resources/favicons/manifest.json">
+        <link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
+        <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        
+    </head>
+    
+    <body>
+        <section class="section-intro" id="intro">
+            <nav>
+                <div class="row">
+                    <img src="resources/img/rei-logo.png" alt="REI Journey logo" class="logo">
+                </div>
+            </nav>
+            <div class="hero-text-box">
+                <h1>REI Journey helps you to achieve your health goal by recommending you workouts through machine learning.</h1>
+                <a class="btn btn-full nav-to-create-goal" href="#">Continue</a>
+            </div>
+        </section>
+        
+        <section class="section-create-goal" id="create-goal">
+            <div class="map-box">
+                
+                <div class="form-box" id="form">
+                    <div class="row">
+                        <h2>What is your goal?</h2>
+                    </div>
+                    
+                    <div class="row">
+                        <form method="post" action="mailer.php" class="contact-form">
+                            <div class="row">
+                                <div class="col span-1-of-3">
+                                    <input type="text" name="goal" id="goal" placeholder="e.g. I want to get rid of my back pain" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input class="btn nav-to-signup" type="submit" value="Continue">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <section class="section-signup" id="signup">
+           <div class="map-box">
+                
+                <div class="form-box" id="form">
+                    <div class="row">
+                        <h2>Sign up to retrieve your personalized plan</h2>
+                    </div>
+                    
+                    <div class="row">
+                        <form method="post" action="mailer.php" class="contact-form">
+                            <div class="row"> 
+                                <input type="email" name="email" id="email" placeholder="Email" required>          
+                            </div>
+                            <div class="row">
+                                <input type="password" name="pwd" id="pwd" placeholder="Password" required>
+                            </div>
+                            <div class="row">
+                                <input type="password" name="pwd" id="repwd" placeholder="Confirm Password" required>
+                            </div>
+                            <div class="row">
+                                <input class="btn nav-to-home" type="submit" value="Sign up">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-weekly-plan" id="weekly-plan">         
+            <div class="row">
+                <a class="nav-to-home"><i class="ion-ios-arrow-back"></i></a>
+                <h2>Weekly Plan</h2>
+            </div>
+            <div class="row js--wp-3">
+                <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                    <img src="resources/img/mon.jpg" alt="Monday Image">
+                    <h3>Monday</h3>
+                </div>
+                 <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                    <img src="resources/img/tue.jpg" alt="Tuesday Image">
+                    <h3>Tuesday</h3>
+                </div>
+                <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                    <img src="resources/img/wed.jpg" alt="Wednesday Image">
+                    <h3>Wednesday</h3>
+                </div>
+                <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                    <img src="resources/img/thur.jpg" alt="Thursday Image">
+                    <h3>Thursday</h3>
+                </div>
+                <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                    <img src="resources/img/fri.jpg" alt="Friday Image">
+                    <h3>Friday</h3>
+                </div>
+                <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                    <img src="resources/img/sat.jpg" alt="Saturday Image">
+                    <h3>Saturday</h3>
+                </div>
+                <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                    <img src="resources/img/sun.png" alt="Sunday Image">
+                    <h3>Sunday</h3>
+                </div> 
+            </div>
+        </section>
+        
+ 
+        <section class="section-daily-plan" id="daily-plan">
+            <div class="row">
+                <a class="nav-to-weekly-plan"><i class="ion-ios-arrow-back"></i></a>
+                <h2>Daily Plan</h2>
+            </div>
+            <div class="row js--wp-3">
+                <div class="col span-1-of-4 box city-info overlay">
+                    <img src="resources/img/lisbon-3.jpg" alt="Lisbon">
+                    <h3>Outdoor</h3>
+                    <h5>30 minutes - Moderate<br>
+                    Cycling from Market St to Mission St San Francisco</h5>
+                </div>
+                <div class="col span-1-of-4 box city-info overlay">
+                    <img src="resources/img/san-francisco.jpg" alt="San Francisco">
+                    <h3>Indoor</h3>
+                    <h5>30 minutes - Intense<br>
+                    Situp 50 times<br>
+                    Mountain Climber 30 times</h5>
+                </div>     
+            </div>
+        </section>
+
+        <section class="section-home">
+            <div class="row">
+                <h2>Home</h2>
+            </div>
+            <ul class="home-showcase clearfix">
+                <li>
+                    <figure class="home-photo nav-to-view-goal">
+                        <img src="resources/img/1.jpg" alt="Goal">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="home-photo nav-to-weekly-plan">
+                        <img src="resources/img/2.jpg" alt="Weekly Plan">
+                    </figure>
+                </li>
+            </ul>
+            <ul class="home-showcase clearfix">
+                <li>
+                    <figure class="home-photo nav-to-history">
+                        <img src="resources/img/5.jpg" alt="History">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="home-photo nav-to-account">
+                        <img src="resources/img/6.jpg" alt="Account">
+                    </figure>
+                </li>
+            </ul>
+        </section>               
+        
+        <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="vendors/js/jquery.waypoints.min.js"></script>
+        <script src="https://maps.google.com/maps/api/js?sensor=true&key=AIzaSyC4NTWn1TGTl6inbqdPc3cmQBGV3Incvr0"></script>
+        <script src="resources/js/script.js"></script>
+        <script src="resources/js/gmaps.js"></script>
+        
+    </body>
+    
+</html>
