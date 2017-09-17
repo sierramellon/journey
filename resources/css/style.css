@@ -75,6 +75,16 @@ section {
     display: none;
 }
 
+.section-view-goal {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.8))), url(../img/back-customers.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../img/back-customers.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    background-attachment: fixed;
+    display: none;
+}
+
 .show {
     display: block;
 }
@@ -421,15 +431,6 @@ input[type=submit]:active {
 
 /* ------------- Testinomials ----------- */
 
-.section-testimonials {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.8))), url(img/back-customers-min.jpg);
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/back-customers-min.jpg);
-    background-size:cover;
-    background-position: center;
-    color: #fff;
-    background-attachment: fixed;
-}
-
 blockquote{
     width:100%;
     padding: 2%;
@@ -710,7 +711,7 @@ footer p{
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(217, 212, 208, 0.43);
+    color: #fff;
 }
 
 .city-info img {

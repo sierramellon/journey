@@ -56,6 +56,12 @@ $(document).ready(function(){
         current_section = '.section-daily-plan';
         $(current_section).toggleClass('show');
     });
+
+    $('.nav-to-view-goal').click(function() {
+        $(current_section).toggleClass('show');
+        current_section = '.section-view-goal';
+        $(current_section).toggleClass('show');
+    });
     
     /* Navigation scroll */
     $(function() {
