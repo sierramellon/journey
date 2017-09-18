@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+    var goal = "";
+    var goal_response = "";
   
     /*For the sticky navigation */
     $('.js--section-features').waypoint(function(direction){
@@ -31,8 +34,21 @@ $(document).ready(function(){
         $(current_section).toggleClass('show');
     });
 
+    goal_response_callback = function(data) {
+        if (data === "LOADING") {
+            $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
+        } else {
+            goal_response = data;
+            $(".goal_response").text("REI Journey will help you with your concern of " + goal_response);
+        }
+    }
+
     $('.nav-to-signup').click(function() {
         event.preventDefault();
+        // send the goal out for prediction
+        goal = $("#goal").val();
+        $(".goal_text").text(goal);
+        $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
         $(current_section).toggleClass('show');
         current_section = '.section-signup';
         $(current_section).toggleClass('show');
