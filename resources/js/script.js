@@ -63,6 +63,27 @@ $(document).ready(function(){
         $(current_section).toggleClass('show');
     });
     
+    /* Check and uncheck daily plan for outdoor and indoor */
+    $('#unchecked-out').click(function() {
+        $('#unchecked-out').css('display', 'none');
+        $('#checked-out').css('display', 'block');
+    });
+    
+    $('#checked-out').click(function() {
+        $('#checked-out').css('display', 'none');
+        $('#unchecked-out').css('display', 'block');
+    });
+    
+    $('#unchecked-in').click(function() {
+        $('#unchecked-in').css('display', 'none');
+        $('#checked-in').css('display', 'block');
+    });
+    
+    $('#checked-in').click(function() {
+        $('#checked-in').css('display', 'none');
+        $('#unchecked-in').css('display', 'block');
+    });
+    
     /* Navigation scroll */
     $(function() {
       $('a[href*="#"]:not([href="#"])').click(function() {
