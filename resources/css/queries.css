@@ -45,6 +45,8 @@
     }
     section { padding: 30px 0;}
     .row, .intro-text-box {padding: 0 4%;}
+    .intro-text-box {width:100%;}
+    
     .col {
         width: 100%;
         margin: 0 0 4% 0;
