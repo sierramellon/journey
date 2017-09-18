@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+    var goal = "";
+    var goal_response = "";
   
     /*For the sticky navigation */
     $('.js--section-features').waypoint(function(direction){
@@ -25,43 +28,46 @@ $(document).ready(function(){
     /* Navigations */
     var current_section = '.section-intro';
     $(current_section).toggleClass('show');
-    $('.nav-to-create-goal').click(function() {
-        $(current_section).toggleClass('show');
-        current_section = '.section-create-goal';
-        $(current_section).toggleClass('show');
-    });
 
-    $('.nav-to-signup').click(function() {
-        event.preventDefault();
-        $(current_section).toggleClass('show');
-        current_section = '.section-signup';
-        $(current_section).toggleClass('show');
-    });
+    goal_response_callback = function(data) {
+        if (data === "LOADING") {
+            $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
+        } else {
+            goal_response = data;
+            $(".goal_response").text("REI Journey will help you with your concern of " + goal_response);
+        }
+    }
 
-    $('.nav-to-home').click(function() {
-        event.preventDefault();
-        $(current_section).toggleClass('show');
-        current_section = '.section-home';
-        $(current_section).toggleClass('show');
-    });
-   
-    $('.nav-to-weekly-plan').click(function() {
-        $(current_section).toggleClass('show');
-        current_section = '.section-weekly-plan';
-        $(current_section).toggleClass('show');
-    });
+    var navigation_instructions = {
+        '.nav-to-create-goal': null,
+        '.nav-to-signup': function() {
+            event.preventDefault();
+            goal = $("#goal").val();
+            $(".goal_text").text(goal);
+            $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
+        },
+        '.nav-to-home': function() {event.preventDefault();},
+        '.nav-to-weekly-plan': null,
+        '.nav-to-daily-plan': null,
+        '.nav-to-view-goal': null,
+        '.nav-to-history': null
+    }
 
-    $('.nav-to-daily-plan').click(function() {
-        $(current_section).toggleClass('show');
-        current_section = '.section-daily-plan';
-        $(current_section).toggleClass('show');
-    });
-
-    $('.nav-to-view-goal').click(function() {
-        $(current_section).toggleClass('show');
-        current_section = '.section-view-goal';
-        $(current_section).toggleClass('show');
-    });
+    // setup navigation event handlers
+    for (var instruction in navigation_instructions) {
+        if (navigation_instructions.hasOwnProperty(instruction)) {
+            $(instruction).click(function(instruction) {
+                return function() {
+                    if (navigation_instructions[instruction]) {
+                        navigation_instructions[instruction]();
+                    }
+                    $(current_section).toggleClass('show');
+                    current_section = instruction.replace('nav-to', 'section');
+                    $(current_section).toggleClass('show');
+                }
+            }(instruction));
+        }
+    }
     
     /* Check and uncheck daily plan for outdoor and indoor */
     $('#unchecked-out').click(function() {

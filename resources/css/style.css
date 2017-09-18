@@ -67,6 +67,10 @@ section {
     display: none;
 }
 
+.section-history {
+    display: none;
+}
+
 .section-daily-plan {
     display: none;
 }
