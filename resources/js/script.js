@@ -26,10 +26,7 @@ $(document).ready(function(){
     });
 
     /* Navigations */
-    var current_section = '.section-intro';
-    $(current_section).toggleClass('show');
-
-    goal_response_callback = function(data) {
+    var goal_response_callback = function(data) {
         if (data === "LOADING") {
             $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
         } else {
@@ -54,6 +51,16 @@ $(document).ready(function(){
     }
 
     // setup navigation event handlers
+    var sections = [];
+    sections.peek = function() {
+        if (sections.length == 0) {
+            return null;
+        } else {
+            return sections[sections.length - 1];
+        }
+    };
+    sections.push('.section-intro');
+    $(sections.peek()).toggleClass('show');
     for (var instruction in navigation_instructions) {
         if (navigation_instructions.hasOwnProperty(instruction)) {
             $(instruction).click(function(instruction) {
@@ -61,13 +68,18 @@ $(document).ready(function(){
                     if (navigation_instructions[instruction]) {
                         navigation_instructions[instruction]();
                     }
-                    $(current_section).toggleClass('show');
-                    current_section = instruction.replace('nav-to', 'section');
-                    $(current_section).toggleClass('show');
+                    $(sections.peek()).toggleClass('show');
+                    sections.push(instruction.replace('nav-to', 'section'));
+                    $(sections.peek()).toggleClass('show');
                 }
             }(instruction));
         }
     }
+
+    $('.nav-back').click(function() {
+        $(sections.pop()).toggleClass('show');
+        $(sections.peek()).toggleClass('show');
+    });
     
     /* Check and uncheck daily plan for outdoor and indoor */
     $('#unchecked-out').click(function() {
