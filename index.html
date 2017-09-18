@@ -32,32 +32,29 @@
                     <img src="resources/img/rei-logo.png" alt="REI Journey logo" class="logo">
                 </div>
             </nav>
-            <div class="hero-text-box">
+            <div class="intro-text-box">
                 <h1>REI Journey helps you to achieve your health goal by recommending you workouts through machine learning.</h1>
                 <a class="btn btn-full nav-to-create-goal" href="#">Continue</a>
             </div>
         </section>
         
-        <section class="section-create-goal" id="create-goal">
-            <div class="map-box">
-                
-                <div class="form-box" id="form">
-                    <div class="row">
-                        <h2>What is your goal?</h2>
-                    </div>
+        <section class="section-create-goal" id="create-goal">   
+            <div class="form-box" id="form">
+                <div class="row">
+                    <h2>What is your goal?</h2>
+                </div>
                     
-                    <div class="row">
-                        <form method="post" action="mailer.php" class="contact-form">
-                            <div class="row">
-                                <div class="col span-1-of-3">
-                                    <input type="text" name="goal" id="goal" placeholder="e.g. I want to get rid of my back pain" required>
-                                </div>
+                <div class="row">
+                    <form method="post" action="mailer.php" class="contact-form">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <input type="text" name="goal" id="goal" placeholder="e.g. I want to get rid of my back pain" required>
                             </div>
-                            <div class="row">
-                                <input class="btn nav-to-signup" type="submit" value="Continue">
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="row">
+                            <input class="btn nav-to-signup" type="submit" value="Continue">
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -92,7 +89,7 @@
 
         <section class="section-weekly-plan" id="weekly-plan">         
             <div class="row">
-                <a class="nav-to-home"><i class="ion-ios-arrow-back"></i></a>
+                <a class="nav-to-home"><i class="ion-ios-arrow-back icon-small"></i></a>
                 <h2>Weekly Plan</h2>
             </div>
             <div class="row js--wp-3">
@@ -130,18 +127,22 @@
  
         <section class="section-daily-plan" id="daily-plan">
             <div class="row">
-                <a class="nav-to-weekly-plan"><i class="ion-ios-arrow-back"></i></a>
+                <a class="nav-to-weekly-plan"><i class="ion-ios-arrow-back icon-small"></i></a>
                 <h2>Daily Plan</h2>
             </div>
             <div class="row js--wp-3">
-                <div class="col span-1-of-4 box city-info overlay">
+                <div class="col span-1-of-4 box city-info">
                     <img src="resources/img/outdoor-cycling-sf.jpg" alt="Outdoor Activity">
+                    <i class="ion-ios-checkmark-outline icon-big" id="unchecked-out"></i>
+                    <i class="ion-ios-checkmark icon-big" id="checked-out"></i>
                     <h3>Outdoor</h3>
                     <h5>30 minutes - Moderate<br>
                     Cycling from Market St to Mission St San Francisco</h5>
                 </div>
-                <div class="col span-1-of-4 box city-info overlay">
+                <div class="col span-1-of-4 box city-info">
                     <img src="resources/img/indoor-rock-climb.jpg" alt="Indoor Activity">
+                    <i class="ion-ios-checkmark-outline icon-big" id="unchecked-in"></i>
+                    <i class="ion-ios-checkmark icon-big" id="checked-in"></i>
                     <h3>Indoor</h3>
                     <h5>30 minutes - Intense<br>
                     Situp 50 times<br>

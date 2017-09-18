@@ -89,23 +89,28 @@ section {
     display: block;
 }
 
+.hide {
+    display: none;
+}
+
 /* ------------- HEADINGS ----------- */
-h1, h2, h3{
+h2, h3{
     font-weight: 300;
     text-transform:uppercase;
 }
 
 h1 {
+    font-weight:100;
     margin-top: 0;
     margin-bottom: 30px;
     color: white;
-    font-size: 200%;
+    font-size: 180%;
     word-spacing: 4px;
     letter-spacing: 1px;
 }
 
 h2 {
-    font-size: 180%;
+    font-size: 150%;
     word-spacing: 2px;
     text-align: center;
     margin-bottom: 30px;
@@ -142,7 +147,6 @@ h3 {
 /* ------------- ICONS ----------- */
 .icon-big {
     font-size: 350%;
-    display: block;
     color: #e67e22;
 }
 
@@ -150,8 +154,7 @@ h3 {
     display: inline-block;
     width: 30px;
     text-align: center;
-    font-size: 120%;
-    color: #e67e22;
+    font-size: 160%;
     margin-right: 10px;
     /* secrets to align text and icons */
     line-height: 120%;
@@ -220,7 +223,7 @@ input[type=submit]:active {
 
 /* ------------- HEADER ----------- */
 
-.hero-text-box {
+.intro-text-box {
    position: absolute;
     width: 1140px;
     top: 50%;
@@ -229,6 +232,10 @@ input[type=submit]:active {
     transform: translate(-50%, -50%);
 }
 
+.intro-text-box a {
+    float: right;
+    margin-top: 15px;
+}
 .logo{
     height: 40px;
     width: auto;
@@ -721,22 +728,20 @@ footer p{
 }
 
 /*----------overlay color over img------------*/
-.overlay {
-  position: relative;
+
+
+.city-info i {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    transition: all 0.2s;
 }
 
-.overlay:before {
-  position: absolute;
-  content:" ";
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  display: none;
-  z-index:0;
-  background-color: rgba(0,255,0,0.5);
+#checked-out {
+    display:none;  
 }
 
-.overlay:hover:before {
-  display: block;
+#checked-in {
+    display: none;
 }
