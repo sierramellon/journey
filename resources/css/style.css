@@ -94,12 +94,6 @@ section {
 }
 
 .section-view-goal {
-    background-image: xxm(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.8))), url(../img/back-customers.jpg);
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../img/back-customers.jpg);
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    background-attachment: fixed;
     display: none;
 }
 
