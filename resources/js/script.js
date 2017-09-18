@@ -18,7 +18,7 @@ $(document).ready(function(){
     
     /* Scroll on buttons */
     $('.js--scroll-to-plans').click(function(){
-        $('html, body').animate({scrollTop: $('.js--section-plans').offset().top}, 1000);
+        $('html, body').animate({scrollTop: $('.js--section-profile').offset().top}, 1000);
     });
     
     $('.js--scroll-to-start').click(function(){
@@ -47,7 +47,8 @@ $(document).ready(function(){
         '.nav-to-weekly-plan': null,
         '.nav-to-daily-plan': null,
         '.nav-to-view-goal': null,
-        '.nav-to-history': null
+        '.nav-to-history': null,
+        '.nav-to-profile': null
     }
 
     // setup navigation event handlers
