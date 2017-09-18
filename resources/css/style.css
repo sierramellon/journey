@@ -45,6 +45,10 @@ section {
     padding: 1%;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 /* ------------- SECTIONS ----------- */
 .section-intro{
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/intro-back.jpg);
@@ -76,6 +80,10 @@ section {
 }
 
 .section-home {
+    background-image: url(img/intro-back.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
     display: none;
 }
 
@@ -326,14 +334,6 @@ input[type=submit]:active {
 }
 
 /* ------------- HOME ----------- */
-
-.section-home {
-    margin-top: 2%;
-    background-image: url(img/intro-back.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-}
 
 .home-showcase {
     list-style: none;
