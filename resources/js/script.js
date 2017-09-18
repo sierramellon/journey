@@ -78,6 +78,12 @@ $(document).ready(function(){
         current_section = '.section-view-goal';
         $(current_section).toggleClass('show');
     });
+
+    $('.nav-to-history').click(function() {
+        $(current_section).toggleClass('show');
+        current_section = '.section-history';
+        $(current_section).toggleClass('show');
+    });
     
     /* Check and uncheck daily plan for outdoor and indoor */
     $('#unchecked-out').click(function() {
