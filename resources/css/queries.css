@@ -35,7 +35,7 @@
         margin-left: 0%;
     }
     .plan-price {font-size: 250%;}
-    .contact-form {width: 90%;}
+    .info-form {width: 90%;}
 }
 
 /*Small phones to small tabkets: from 481 to 767px */
@@ -135,5 +135,5 @@
 /*small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
     section {padding: 25px 0;}
-    .contact-form {width:100%;}
+    .info-form {width:100%;}
 }
