@@ -225,11 +225,19 @@ $(document).ready(function(){
     });
     
     /* Animation on scroll */
+    /*
     $('.js--wp-1').waypoint(function(direction){
         $('.js--wp-1').addClass('animated fadeIn');
     }, {
         offset: '50%'
-    });
+    });*/
+    
+    
+    $('.js--wp-1').addClass('animated fadeIn');
+    $('.js--delay-1').addClass('animated fadeInRight');
+    
+    
+    $('.js--delay-2').addClass('animated fadeIn');
     
     $('.js--wp-2').waypoint(function(direction){
         $('.js--wp-2').addClass('animated fadeInUp');

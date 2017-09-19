@@ -31,9 +31,9 @@
                     <img src="resources/img/rei-logo.png" alt="REI Journey logo" class="logo">
                 </div>
             </nav>
-            <div class="intro-text-box js--wp-1">
-                <h1>REI Journey helps you to achieve your health goal by recommending you workouts through machine learning.</h1>
-                <a class="btn btn-full nav-to-create-goal" href="#">Continue</a>
+            <div class="intro-text-box">
+                <h1 class="js--wp-1">REI Journey helps you to achieve your health goal by recommending you workouts through machine learning.</h1>
+                <a class="btn btn-full nav-to-create-goal js--delay-1" href="#">Continue</a>
             </div>
         </section>
         
@@ -47,9 +47,7 @@
                 <div class="row js--wp-1">
                     <form class="info-form">
                         <div class="row">
-                            <div class="col span-1-of-3">
-                                <input type="text" name="goal" id="goal" placeholder="e.g. I want to get rid of my back pain" required>
-                            </div>
+                            <input type="text" name="goal" id="goal" placeholder="e.g. I want to get rid of my back pain" required>    
                         </div>
                         <div class="row">
                             <input class="btn nav-to-signup" type="submit" value="Continue">
@@ -166,20 +164,28 @@
             <div class="row home-box js--wp-1">
                 <ul class="home-showcase clearfix">
                     <li class="home-photo nav-to-view-goal">
-                        <i class="ion-ios-heart icon-big"></i>
-                        <h3>Goal</h3>      
+                        <div class="symbols">
+                            <i class="ion-ios-heart icon-big"></i>
+                            <h3>Goal</h3>  
+                        </div>
                     </li>
-                    <li class="home-photo nav-to-weekly-plan">                     
-                        <i class="ion-ios-list icon-big"></i>
-                        <h3>Weekly Plan</h3>
+                    <li class="home-photo nav-to-weekly-plan">
+                        <div class="symbols">
+                            <i class="ion-ios-list icon-big"></i>
+                            <h3>Weekly Plan</h3>
+                        </div>
                     </li>
-                    <li class="home-photo nav-to-history">                      
-                        <i class="ion-ios-pulse-strong icon-big"></i>
-                        <h3>History</h3>    
+                    <li class="home-photo nav-to-history">
+                        <div class="symbols">
+                            <i class="ion-ios-pulse-strong icon-big"></i>
+                            <h3>History</h3>
+                        </div>
                     </li>
-                    <li class="home-photo nav-to-profile">                       
-                        <i class="ion-ios-person icon-big"></i>
-                        <h3>Account</h3>  
+                    <li class="home-photo nav-to-profile">
+                        <div class="symbols">
+                            <i class="ion-ios-person icon-big"></i>
+                            <h3>Account</h3>
+                        </div>
                     </li>
                 </ul>
             </div>        
@@ -242,7 +248,7 @@
                             </ul>
                         </div>
                         <div>
-                            <a href="#" class="btn btn-full">Change Password</a>
+                            <a href="#" class="btn btn-full">Edit Profile</a>
                         </div>
                     </div>   
                 </div>
