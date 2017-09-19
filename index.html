@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Ominfood is a premium food delivery service with the mission to bring affordable and healthy meals to as many people as possible.">
+        <meta name="description" content="REI Journey is a service that helps you to achieve your health goal by recommending activities powered by artificial intelligence">
         
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
@@ -22,7 +22,6 @@
         <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
         <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
-        
     </head>
     
     <body>
@@ -44,8 +43,9 @@
                     <h2>What is your goal?</h2>
                 </div>
                     
+
                 <div class="row js--wp-1">
-                    <form method="post" class="contact-form">
+                    <form class="info-form">
                         <div class="row">
                             <div class="col span-1-of-3">
                                 <input type="text" name="goal" id="goal" placeholder="e.g. I want to get rid of my back pain" required>
@@ -63,10 +63,10 @@
                 <div class="form-box" id="form">
                     <div class="row">
                         <h2>Sign up to retrieve your personalized plan</h2>
-                    </div>
-                    
+                    </div>       
+
                     <div class="row js--wp-1">
-                        <form method="post" class="contact-form">
+                        <form class="info-form">
                             <div class="row"> 
                                 <input type="email" name="email" id="email" placeholder="Email" required>          
                             </div>
@@ -91,31 +91,31 @@
                 <h2>Weekly Plan</h2>
             </div>
             <div class="row js--wp-3">
-                <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                <div class="col span-1-of-4 box city-info nav-to-daily-plan" id="Monday">
                     <img src="resources/img/mon.jpg" alt="Monday Image">
                     <h3>Monday</h3>
                 </div>
-                 <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                 <div class="col span-1-of-4 box city-info nav-to-daily-plan" id="Tuesday">
                     <img src="resources/img/tue.jpg" alt="Tuesday Image">
                     <h3>Tuesday</h3>
                 </div>
-                <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                <div class="col span-1-of-4 box city-info nav-to-daily-plan" id="Wednesday">
                     <img src="resources/img/wed.jpg" alt="Wednesday Image">
                     <h3>Wednesday</h3>
                 </div>
-                <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                <div class="col span-1-of-4 box city-info nav-to-daily-plan" id="Thursday">
                     <img src="resources/img/thur.jpg" alt="Thursday Image">
                     <h3>Thursday</h3>
                 </div>
-                <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                <div class="col span-1-of-4 box city-info nav-to-daily-plan" id="Friday">
                     <img src="resources/img/fri.jpg" alt="Friday Image">
                     <h3>Friday</h3>
                 </div>
-                <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                <div class="col span-1-of-4 box city-info nav-to-daily-plan" id="Saturday">
                     <img src="resources/img/sat.jpg" alt="Saturday Image">
                     <h3>Saturday</h3>
                 </div>
-                <div class="col span-1-of-4 box city-info nav-to-daily-plan">
+                <div class="col span-1-of-4 box city-info nav-to-daily-plan" id="Sunday">
                     <img src="resources/img/sun.png" alt="Sunday Image">
                     <h3>Sunday</h3>
                 </div> 
@@ -146,17 +146,14 @@
                     <i class="ion-ios-checkmark-outline icon-big" id="unchecked-out"></i>
                     <i class="ion-ios-checkmark icon-big" id="checked-out"></i>
                     <h3>Outdoor</h3>
-                    <h5>30 minutes - Moderate<br>
-                    Cycling from Market St to Mission St San Francisco</h5>
+                    <h5 id="outdoor_activity"></h5>
                 </div>
                 <div class="col span-1-of-4 box city-info">
                     <img src="resources/img/indoor-rock-climb.jpg" alt="Indoor Activity">
                     <i class="ion-ios-checkmark-outline icon-big" id="unchecked-in"></i>
                     <i class="ion-ios-checkmark icon-big" id="checked-in"></i>
                     <h3>Indoor</h3>
-                    <h5>30 minutes - Intense<br>
-                    Situp 50 times<br>
-                    Mountain Climber 30 times</h5>
+                    <h5 id="indoor_activity"></h5>
                 </div>     
             </div>
         </section>
