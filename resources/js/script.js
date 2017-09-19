@@ -121,8 +121,12 @@ $(document).ready(function(){
         '.nav-to-create-goal': null,
         '.nav-to-signup': function(element) {
             event.preventDefault();
+            // update goal DOM text
             goal = $("#goal").val();
             $(".goal_text").text(goal);
+            // retrieve health information from device
+            confirm("Please allow REI Journey to access your health data in order to provide you with a better exercise plan");
+            // retrieve AI label and activity plans from server
             $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
             $.get("https://superb-binder-140518.appspot.com/api/getactivities?goal=" + goal, get_activity_response_callback);
         },
