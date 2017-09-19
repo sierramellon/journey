@@ -73,6 +73,10 @@ section {
     display: none;
 }
 
+.section-login {
+    display: none;
+}
+
 .section-weekly-plan {
     display: none;
 }
@@ -495,7 +499,8 @@ blockquote:before {
 }
 
 cite img{
-    height: 45px;
+    height: 65px;
+    width: 65px;
     border-radius: 50%;
     margin-right: 10px;
     vertical-align: middle;

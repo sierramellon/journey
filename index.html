@@ -66,7 +66,7 @@
                     <div class="row js--wp-1">
                         <form class="info-form">
                             <div class="row"> 
-                                <input type="email" name="email" id="email" placeholder="Email" required>          
+                                <input type="email" name="email" id="email-signup" placeholder="Email" required>          
                             </div>
                             <div class="row">
                                 <input type="password" name="pwd" id="pwd" placeholder="Password" required>
@@ -76,6 +76,30 @@
                             </div>
                             <div class="row">
                                 <input class="btn nav-to-home" type="submit" value="Sign up">
+                            </div>
+                        </form>
+
+                        <a class="btn nav-to-login">Have an account? Login here</a>
+                    </div>
+                </div>
+        </section>
+
+        <section class="section-login" id="login">             
+                <div class="form-box" id="form">
+                    <div class="row">
+                        <h2>Login to access your personalized plan</h2>
+                    </div>       
+
+                    <div class="row js--wp-1">
+                        <form class="info-form">
+                            <div class="row"> 
+                                <input type="email" name="email" id="email-login" placeholder="Email" required>          
+                            </div>
+                            <div class="row">
+                                <input type="password" name="pwd" id="pwd" placeholder="Password" required>
+                            </div>
+                            <div class="row">
+                                <input class="btn nav-to-home" type="submit" value="Login">
                             </div>
                         </form>
                     </div>
@@ -197,19 +221,16 @@
             </div>
             <div class="row">
                 <div class="col span-1-of-3 plan-box js--wp-1">
-                    <blockquote class="goal_text">
-                        I want to get rid of my back pain and improve my health
-                    </blockquote>
+                    <blockquote class="goal-info"></blockquote>
                     <cite>
-                        <img src="resources/img/customer-1.jpg" alt="customer 1">Qin Yang
+                        <img src="" alt="customer 1" class="image-info">
+                        <span class="name-info"></span>
                     </cite>
                 </div>
             </div>
             <div class="row">
                 <div class="col span-1-of-3 plan-box js--wp-1">
-                    <blockquote class="goal_response">
-                        I want to get rid of my back pain and improve my health
-                    </blockquote>
+                    <blockquote class="label-info"></blockquote>
                     <cite>
                         <img src="resources/img/rei-logo.png" alt="customer 1">REI Journey
                     </cite>
@@ -226,28 +247,33 @@
                 <div class="col span-1-of-3">
                     <div class="plan-box js--wp-1">
                         <div>
-                            <h3>Jane Doe</h3>
-                            <p class="plan-price"><img src="resources/img/customer-1.jpg" alt="customer 1"></p>
-                            <p class="plan-price-meal">janedoe@gmail.com</p>
+                            <h3 class="name-info"></h3>
+                            <p class="plan-price"><cite><img src="" class="image-info"></cite></p>
+                            <p class="plan-price-meal email-info"></p>
                         </div>
                         <div>
                             <ul>
                                 <li>
-                                    <i class="ion-ios-checkmark-empty icon-small"></i>120 lbs
+                                    <i class="ion-ios-checkmark-empty icon-small"></i>
+                                    <span class="weight-info"></span>
                                 </li>
                                 <li>
-                                    <i class="ion-ios-checkmark-empty icon-small"></i>5' 5"
+                                    <i class="ion-ios-checkmark-empty icon-small"></i>
+                                    <span class="height-info"></span>
                                 </li>
                                 <li>
-                                    <i class="ion-ios-checkmark-empty icon-small"></i>Female
+                                    <i class="ion-ios-checkmark-empty icon-small"></i>
+                                    <span class="gender-info"></span>
                                 </li>
                                 <li>
-                                    <i class="ion-ios-checkmark-empty icon-small"></i>On track to health goal
+                                    <i class="ion-ios-checkmark-empty icon-small"></i>
+                                    <span class="status-info"></span>
                                 </li>
                             </ul>
                         </div>
                         <div>
                             <a href="#" class="btn btn-full">Edit Profile</a>
+                            <a href="#" class="btn btn-full nav-to-intro">Log out</a>
                         </div>
                     </div>   
                 </div>

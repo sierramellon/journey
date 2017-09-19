@@ -4,7 +4,18 @@ $(document).ready(function(){
     var goal_response = "";
     var today = "";
     var activity_plan = {};
+    var user_info = {};
     /*
+    var user_info = {
+        "name": "Jane Doe",
+        "image": "resources/img/1.jpg",
+        "email": "janedoe@gmail.com",
+        "weight": "120 lbs",
+        "height": "5' 5\"",
+        "gender": "Female",
+        "status": "On track to health goal"
+    };
+
     var activity_plan = {
         "Monday": {
             "Outdoor": {
@@ -107,7 +118,7 @@ $(document).ready(function(){
             $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
         } else {
             goal_response = data;
-            $(".goal_response").text("REI Journey will help you with your concern of " + goal_response);
+            $(".label-info").text("REI Journey will help you with your concern of " + goal_response);
         }
     }
 
@@ -116,21 +127,52 @@ $(document).ready(function(){
         activity_plan = JSON.parse(data);
     }
 
+    /* Getting the user info from backend */
+    var get_user_info_response_callback = function(data) {
+        user_info = JSON.parse(data);
+        for (var attr in user_info) {
+            if (user_info.hasOwnProperty(attr)) {
+                if (attr === "image") {
+                    $("." + attr + "-info").attr("src", user_info[attr]);         
+                } else if (attr === "label") {
+                    $(".label-info").text("REI Journey will help you with your concern of " + user_info[attr]);
+                }else {
+                    $("." + attr + "-info").text(user_info[attr]);
+                }
+            }
+        }
+    }
+
     /* Navigations */
     var navigation_instructions = {
+        '.nav-to-intro': function() {
+            $("#goal").val(""); 
+        },
         '.nav-to-create-goal': null,
+        '.nav-to-login': null,
         '.nav-to-signup': function(element) {
             event.preventDefault();
             // update goal DOM text
-            goal = $("#goal").val();
-            $(".goal_text").text(goal);
+            goal = $("#goal").val();         
+            $(".goal-info").text(goal);
             // retrieve health information from device
             confirm("Please allow REI Journey to access your health data in order to provide you with a better exercise plan");
             // retrieve AI label and activity plans from server
             $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
             $.get("https://superb-binder-140518.appspot.com/api/getactivities?goal=" + goal, get_activity_response_callback);
         },
-        '.nav-to-home': function() {event.preventDefault();},
+        '.nav-to-home': function() {
+            event.preventDefault();
+            var email = "";
+            if ($("#email-signup").val()) {
+                email = $("#email-signup").val();
+            } else {
+                email = $("#email-login").val();
+            }
+            
+            // retrieve user information from server
+            $.get("https://superb-binder-140518.appspot.com/api/userinfo?email=" + email, get_user_info_response_callback);
+        },
         '.nav-to-weekly-plan': null,
         '.nav-to-daily-plan': function(element) {
             today = element["id"];
