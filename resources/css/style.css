@@ -162,6 +162,12 @@ h3 {
     color: #e67e22;
 }
 
+.icon-medium {
+    font-size: 190%;
+    color: #e67e22;
+    margin-right: 20px;
+}
+
 .icon-small {
     display: inline-block;
     width: 30px;
@@ -807,3 +813,34 @@ footer p{
 #checked-in {
     display: none;
 }
+
+.history-week i {
+    position:absolute;
+    right: 5%;
+}
+
+.feedback {
+    position:relative;
+}
+
+#feedback-yes {
+    display:none;
+}
+
+.feedback h4 {
+    margin-left: 5%;
+}
+
+/*-----------float icons-------------*/
+.float-left {
+    float:left;
+}
+
+.float-right {
+    float: right;
+}
+
+.section-history h4 {
+    margin-top: 5px;
+}
+
