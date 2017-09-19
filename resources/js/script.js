@@ -146,7 +146,12 @@ $(document).ready(function(){
     /* Navigations */
     var navigation_instructions = {
         '.nav-to-intro': function() {
-            $("#goal").val(""); 
+            $("#goal").val("");
+            $("#email-signup").val("");
+            $("#pwd").val("");
+            $("#repwd").val("");
+            $("#email-login").val("");
+            $("#pwd-login").val("");
         },
         '.nav-to-create-goal': null,
         '.nav-to-login': null,
