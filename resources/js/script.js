@@ -114,7 +114,6 @@ $(document).ready(function(){
     /* Getting the AI generated activities */
     var get_activity_response_callback = function(data) {
         activity_plan = JSON.parse(data);
-        console.log(activity_plan);
     }
 
     /* Navigations */
@@ -131,6 +130,7 @@ $(document).ready(function(){
         '.nav-to-weekly-plan': null,
         '.nav-to-daily-plan': function(element) {
             today = element["id"];
+            $(".day-in-daily-plan").text(today);
             $("#outdoor_activity").text(activity_plan[today]["Outdoor"]["activity"]);         
             if (activity_plan[today]["Outdoor"]["finished"]) {
                 mark_outdoor_finished();
