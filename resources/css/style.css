@@ -89,7 +89,7 @@ section {
     background-image: url(img/intro-back.jpg);
     background-size: cover;
     background-position: center;
-    height: 100%;
+    height: 100vh;
     display: none;
 }
 
@@ -387,7 +387,7 @@ input[type=submit]:active {
 }
 
 .home-box {
-    height: 100vh;
+    
     margin-top: 10%;
 }
 
