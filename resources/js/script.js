@@ -3,6 +3,8 @@ $(document).ready(function(){
     var goal = "";
     var goal_response = "";
     var today = "";
+    var activity_plan = {};
+    /*
     var activity_plan = {
         "Monday": {
             "Outdoor": {
@@ -75,6 +77,7 @@ $(document).ready(function(){
             }                  
         }
     };
+    */
   
     /*For the sticky navigation */
     $('.js--section-features').waypoint(function(direction){
@@ -98,7 +101,7 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop: $('.js--section-features').offset().top}, 1000);
     });
 
-    /* Navigations */
+    /* Getting the AI generated label from server */
     var goal_response_callback = function(data) {
         if (data === "LOADING") {
             $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
@@ -108,6 +111,13 @@ $(document).ready(function(){
         }
     }
 
+    /* Getting the AI generated activities */
+    var get_activity_response_callback = function(data) {
+        activity_plan = JSON.parse(data);
+        console.log(activity_plan);
+    }
+
+    /* Navigations */
     var navigation_instructions = {
         '.nav-to-create-goal': null,
         '.nav-to-signup': function(element) {
@@ -115,6 +125,7 @@ $(document).ready(function(){
             goal = $("#goal").val();
             $(".goal_text").text(goal);
             $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
+            $.get("https://superb-binder-140518.appspot.com/api/getactivities?goal=" + goal, get_activity_response_callback);
         },
         '.nav-to-home': function() {event.preventDefault();},
         '.nav-to-weekly-plan': null,
