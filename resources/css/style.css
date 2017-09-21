@@ -149,12 +149,6 @@ h3 {
 }
 
 /* ----- PARAGRAPHS ------*/
-.long-copy {
-    line-height: 145%;
-    width: 70%;
-    margin-left: 15%;
-}
-
 .box p {
     font-size: 90%;
     line height: 145%;
@@ -300,19 +294,6 @@ input[type=submit]:active {
    border-bottom: 2px solid #e67e22;
 }
 
-/* Mobile Navi */
-.mobile-nav-icon {
-    float: left;
-    margin-top: 30px;
-    cursor: pointer;
-    display: none;
-}
-
-.mobile-nav-icon i {
-    font-size: 200%;
-    color: #fff;
-}
-
 /* sticky navi */
 .sticky {
     position: fixed;
@@ -339,7 +320,7 @@ input[type=submit]:active {
 
 /* ------------- FEATURES ----------- */
 
-.features .long-copy {
+.features {
     margin-bottom: 30px;
 }
 
@@ -417,43 +398,6 @@ input[type=submit]:active {
 
 .section-steps {
     background-color: #f4f4f4;
-}
-
-.steps-box:first-child {
-    text-align: right;
-    padding-right: 3%;
-    margin-top: 30px;
-}
-
-.steps-box:last-child {
-    padding-left: 3%;
-    margin-top: 70px;
-}
-
-.app-screen {
-    width: 40%;
-}
-
-.works-step {
-    margin-bottom: 50px;
-}
-
-.works-step:last-of-type {
-    margin-bottom: 80px;
-}
-
-.works-step div {
-    color: #e67e22;
-    border: 2px solid #e67e22;
-    display: inline-block;
-    border-radius: 50%;
-    height: 55px;
-    width: 55px;
-    text-align: center;
-    padding: 5px;
-    float: left;
-    font-size: 150%;
-    margin-right: 25px;
 }
 
 .btn-app:link, .btn-app:visited {
@@ -592,19 +536,6 @@ input[type=checkbox] {
 
 *:focus {
     outline:none;
-}
-
-.map-box {
-    width: 100%;
-    height: 650px;
-    position: relative;
-}
-
-.map {
-    width: 100%;
-    height: 100%;;
-    position: relative;
-    z-index: 0;
 }
 
 .form-box {
