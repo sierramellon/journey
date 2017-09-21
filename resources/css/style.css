@@ -520,7 +520,7 @@ cite {
 
 /* ------------- SIGN UP ----------- */
 
-.plan-box {
+.card-text-view {
     background-color: #fff;
     border-radius: 5px;
     width: 90%;
@@ -530,17 +530,17 @@ cite {
     padding: 5px;
 }
 
-.plan-box div {
+.card-text-view div {
     padding: 15px;
     border-bottom: 1px solid #f8f8f8;
 }
 
-.plan-box div:last-child {
+.card-text-view div:last-child {
     text-align: center;
     border-bottom: 0;
 }
 
-.plan-box div:first-child {
+.card-text-view div:first-child {
     background-color: #fcfcfc;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -564,11 +564,11 @@ cite {
 }
 
 
-.plan-box ul {
+.card-text-view ul {
     list-style: none;
 }
 
-.plan-box ul li {
+.card-text-view ul li {
     padding: 5px 0;
 }
 
