@@ -148,6 +148,21 @@ h3 {
     margin-bottom: 15px;
 }
 
+.logo{
+    height: 40px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.symbols {
+    position: absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
 /* ----- PARAGRAPHS ------*/
 .box p {
     font-size: 90%;
@@ -237,7 +252,7 @@ input[type=submit]:active {
     color: #fff;
 }
 
-/* ------------- HEADER ----------- */
+/* ------------- INTRO ----------- */
 
 .intro-text-box {
    position: absolute;
@@ -251,77 +266,6 @@ input[type=submit]:active {
 .intro-text-box a {
     float: right;
     margin-top: 15px;
-}
-.logo{
-    height: 40px;
-    width: auto;
-    float: left;
-    margin-top: 20px;
-}
-
-.logo-black {
-    height: 50px;
-    width: auto;
-    float: left;
-    margin: 5px 0;
-    display: none;
-}
-
-/*main navi*/
-.main-nav {
-    float: right;
-    list-style: none;
-    margin-top: 55px;
-}
-
-.main-nav li{
-    display: inline;
-    margin-left: 40px;
-}
-
-.main-nav li a:link, .main-nav li a:visited{
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 90%;
-    padding: 8px 0;
-    border-bottom: 2px solid transparent;
-    -webkit-transition: border-bottom 0.2s;
-    transition: border-bottom 0.2s;
-}
-
-.main-nav li a:hover, .main-nav li a:active{
-   border-bottom: 2px solid #e67e22;
-}
-
-/* sticky navi */
-.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.97);
-    -webkit-box-shadow: 0 2px 2px;
-    box-shadow: 0 2px 2px #efefef;
-    z-index: 9999;
-}
-
-.sticky .main-nav {
-    margin-top: 18px;
-}
-
-.sticky .main-nav li a:link, .sticky .main-nav li a:visited{
-    padding: 16px 0;
-    color: #555;
-}
-
-.sticky .logo {display: none;}
-.sticky .logo-black {display: block;}
-
-/* ------------- FEATURES ----------- */
-
-.features {
-    margin-bottom: 30px;
 }
 
 /* ------------- HOME ----------- */
@@ -341,14 +285,6 @@ input[type=submit]:active {
     border-radius: 50%;
     border: solid 1px #5a5a5a;
     margin-top: 10px;
-}
-
-.symbols {
-    position: absolute;
-    left:50%;
-    top:50%;
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
 }
 
 .home-photo {
@@ -394,23 +330,7 @@ input[type=submit]:active {
     margin-top: 10%;
 }
 
-/* ------------- HOW IT WORKS ----------- */
-
-.section-steps {
-    background-color: #f4f4f4;
-}
-
-.btn-app:link, .btn-app:visited {
-   border-bottom: 0; 
-}
-
-.btn-app img {
-    height: 50px;
-    width: auto;
-    margin-right: 10px;
-}
-
-/* ------------- Cities ----------- */
+/* ------------- Cards ----------- */
 
 .card-view {
     padding: 0 10px;
@@ -421,7 +341,7 @@ input[type=submit]:active {
     margin-bottom: 15px;
 }
 
-/* ------------- Testinomials ----------- */
+/* ------------- View goals ----------- */
 
 blockquote{
     width:100%;
@@ -563,80 +483,6 @@ input[type=checkbox] {
 
 .error {
     background-color: rgba(212, 77, 77, 0.95);
-}
-
-/* ------------- Footer ----------- */
-
-footer {
-    background-color: #333;
-    padding: 40px;
-    font-size: 80%;
-}
-
-.footer-nav {
-    list-style: none;
-    float: left;
-}
-
-.social-links {
-    list-style: none;
-    float: right;
-}
-
-.footer-nav li, .social-links li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.footer-nav li:last-child, .social-links li:last-child {
-    margin-right: 0;
-}
-
-.footer-nav li a:link, .footer-nav li a:visited,
-.social-links li a:link, .social-links li a:visited {
-    text-decoration: none;
-    border: 0;
-    color: #888;
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
-}
-
-.footer-nav li a:hover, .footer-nav li a:active{
-    color: #fff;
-}
-
-.social-links li a:link, .social-links li a:visited {
-    font-size: 170%;
-}
-
-.ion-social-facebook:hover {
-    color: #3b5998;
-}
-
-.ion-social-facebook,
-.ion-social-twitter,
-.ion-social-googlplus,
-.ion-social-instagram {
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
-}
-
-.ion-social-twitter:hover {
-    color: #00aced;
-}
-
-.ion-social-googleplus:hover {
-    color: #dd4b39;
-}
-
-.ion-social-instagram:hover {
-    color: #517fa4;
-}
-
-footer p{
-    color: #888;
-    text-align: center;
-    margin-top: 30px;
 }
 
 
