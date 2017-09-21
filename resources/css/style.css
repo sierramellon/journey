@@ -467,10 +467,10 @@ input[type=submit]:active {
 
 /* ------------- Cities ----------- */
 
-.city-info {
+.card-view {
     padding: 0 10px;
 }
-.city-info img {
+.card-view img {
     width: 100%;
     height: auto;
     margin-bottom: 15px;
@@ -772,11 +772,11 @@ footer p{
 
 /*----------text over imag------------*/
 
-.city-info {
+.card-view {
    position:relative;
 }
 
-.city-info h3 {
+.card-view h3 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -785,7 +785,7 @@ footer p{
     font-size: 130%;
 }
 
-.city-info h5 {
+.card-view h5 {
     text-align: center;
     position: absolute;
     top: 70%;
@@ -794,7 +794,7 @@ footer p{
     color: #fff;
 }
 
-.city-info img {
+.card-view img {
    height: 200px;
    width: 100%;
    overflow: hidden;
@@ -803,7 +803,7 @@ footer p{
 /*----------overlay color over img------------*/
 
 
-.city-info i {
+.card-view i {
     position: absolute;
     left: 50%;
     top: 30%;
