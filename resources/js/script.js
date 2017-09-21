@@ -111,9 +111,11 @@ $(document).ready(function(){
         if (navigation_instructions.hasOwnProperty(instruction)) {
             $(instruction).click(function(instruction) {
                 return function() {
+                    // special naviation per section
                     if (navigation_instructions[instruction]) {
                         navigation_instructions[instruction](this);
                     }
+                    // general navigation
                     $(sections.peek()).toggleClass('show');
                     sections.push(instruction.replace('nav-to', 'section'));
                     $(sections.peek()).toggleClass('show');
@@ -122,6 +124,7 @@ $(document).ready(function(){
         }
     }
 
+    // back button navigation
     $('.nav-back').click(function() {
         $(sections.pop()).toggleClass('show');
         $(sections.peek()).toggleClass('show');
@@ -171,21 +174,4 @@ $(document).ready(function(){
     $('.js--delay-1').addClass('animated fadeInRight');
     $('.js--wp-2').addClass('animated fadeInUp');
     $('.js--wp-4').addClass('animated pulse');
-    
-    /* mobile navigation */
-    $('.js--nav-icon').click(function(){
-        var nav = $('.js--main-nav');
-        var icon = $('.js--nav-icon i');
-        
-        nav.slideToggle(200);
-        if(icon.hasClass('ion-navicon-round')){
-            icon.addClass('ion-close-round');
-            icon.removeClass('ion-navicon-round');
-        }else {
-            icon.addClass('ion-navicon-round');
-            icon.removeClass('ion-close-round');
-        }
-        
-    });
-
 });
