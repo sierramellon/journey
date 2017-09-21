@@ -1,116 +1,11 @@
 $(document).ready(function(){
 
+    // some global states
     var goal = "";
     var goal_response = "";
     var today = "";
     var activity_plan = {};
     var user_info = {};
-    /*
-    var user_info = {
-        "name": "Jane Doe",
-        "image": "resources/img/1.jpg",
-        "email": "janedoe@gmail.com",
-        "weight": "120 lbs",
-        "height": "5' 5\"",
-        "gender": "Female",
-        "status": "On track to health goal"
-    };
-
-    var activity_plan = {
-        "Monday": {
-            "Outdoor": {
-                "activity": "50 minutes - Bicycling along Golden Gate Bridge",
-                "finished": false
-            },
-            "Indoor": {
-                "activity": "50 minutes - High knee jumping",
-                "finished": false
-            }
-        },
-        "Tuesday": {
-            "Outdoor": {
-                "activity": "45 minutes - Jogging on Market Street",
-                "finished": false
-            },
-            "Indoor": {
-                "activity": "45 minutes - Push-ups and situps",
-                "finished": false
-            }   
-        },
-        "Wednesday": {
-            "Outdoor": {
-                "activity": "45 minutes - Swimming in San Francisco recreational center",
-                "finished": false
-            },
-            "Indoor": {                
-                "activity": "30 minutes - Rope jumpping",
-                "finished": false
-            }                
-        },
-        "Thursday": {
-            "Outdoor": {
-                "activity": "45 minutes - Jogging on Market Street",
-                "finished": false
-            },
-            "Indoor": {                    
-                "activity": "45 minutes - Abs exercise combo",
-                "finished": false
-            }                  
-        },
-        "Friday": {
-            "Outdoor": {
-                "activity": "45 minutes - Jogging on Market Street",
-                "finished": false
-            },
-            "Indoor": {                   
-                "activity": "35 minutes - Treadmills",
-                "finished": false
-            }                  
-        },
-        "Saturday": {
-            "Outdoor": {
-                "activity": "45 minutes - Hiking on twin peaks",
-                "finished": false
-            },
-            "Indoor": {                      
-                "activity": "45 minutes - Weight training",
-                "finished": false
-            }                  
-        },
-        "Sunday": {
-            "Outdoor": {
-                "activity": "60 minutes - Yoga in golden gate park",
-                "finished": false
-            },
-            "Indoor": {                   
-                "activity": "45 minutes - Indoor cycling",
-                "finished": false
-            }                  
-        }
-    };
-    */
-  
-    /*For the sticky navigation */
-    $('.js--section-features').waypoint(function(direction){
-        if (direction=="down"){
-            $('nav').addClass('sticky');
-        }
-        else {
-            $('nav').removeClass('sticky');
-        }
-    }, {
-            offset: '60px'
-    });
-    
-    
-    /* Scroll on buttons */
-    $('.js--scroll-to-plans').click(function(){
-        $('html, body').animate({scrollTop: $('.js--section-profile').offset().top}, 1000);
-    });
-    
-    $('.js--scroll-to-start').click(function(){
-        $('html, body').animate({scrollTop: $('.js--section-features').offset().top}, 1000);
-    });
 
     /* Getting the AI generated label from server */
     var goal_response_callback = function(data) {
@@ -272,35 +167,9 @@ $(document).ready(function(){
     $('#feedback-no').click(mark_feedback_yes); 
     $('#feedback-yes').click(mark_feedback_no);    
     
-    /* Navigation scroll */
-    $(function() {
-      $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
-    
-    /* Animation on scroll */
-    /*
-    $('.js--wp-1').waypoint(function(direction){
-        $('.js--wp-1').addClass('animated fadeIn');
-    }, {
-        offset: '50%'
-    });*/
-    
-    
     $('.js--wp-1').addClass('animated fadeIn');
     $('.js--delay-1').addClass('animated fadeInRight');
     $('.js--wp-2').addClass('animated fadeInUp');
-    $('.js--wp-3').addClass('animated fadeIn');
     $('.js--wp-4').addClass('animated pulse');
     
     /* mobile navigation */

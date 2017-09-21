@@ -477,14 +477,6 @@ input[type=submit]:active {
     margin-bottom: 15px;
 }
 
-.city-feature {
-    margin-bottom: 5px;
-}
-
-.city-feature a:link, .city-feature a:visited{
-    
-}
-
 /* ------------- Testinomials ----------- */
 
 blockquote{
@@ -547,20 +539,14 @@ cite {
     border-top-right-radius: 5px;
 }
 
-.plan-price {
+.p-image-info {
     font-size: 300%;
     margin-bottom: 10px;
     font-weight: 100;
     color: #e67e22;
 }
 
-
-.plan-price span {
-    font-size: 30%;
-    font-weight: 300;
-}
-
-.plan-price-meal {
+.email-info {
     font-size: 80%;
 }
 
@@ -726,8 +712,7 @@ footer p{
 /* Animations */
 
 .js--wp-1, 
-.js--wp-2, 
-.js--wp-3 {
+.js--wp-2 {
     opacity: 0;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
@@ -739,8 +724,7 @@ footer p{
 }
 
 .js--wp-1.animated,
-.js--wp-2.animated,
-.js--wp-3.animated {
+.js--wp-2.animated {
     opacity: 1;
 }
 

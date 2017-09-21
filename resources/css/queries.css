@@ -29,12 +29,11 @@
         width: 17px;
         margin-right: 10px;
     }
-    .city-feature {font-size: 90%;}
     .card-text-view {
         width: 100%;
         margin-left: 0%;
     }
-    .plan-price {font-size: 250%;}
+    .p-image-info {font-size: 250%;}
     .info-form {width: 90%;}
 }
 
