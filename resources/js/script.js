@@ -58,7 +58,7 @@ $(document).ready(function(){
             // retrieve health information from device
             confirm("Please allow REI Journey to access your health data to provide you with a better exercise plan");
             // retrieve AI label and activity plans from server
-            $.get("/api/processgoal?goal=" + goal, goal_response_callback);
+            if (goal) $.get("/api/processgoal?goal=" + goal, goal_response_callback);
             $.get("/api/getactivities?goal=" + goal, get_activity_response_callback);
         },
         '.nav-to-home': function() {
