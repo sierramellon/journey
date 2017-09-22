@@ -195,12 +195,6 @@ h3 {
     margin-top:-2px;
 }
 
-.card-text-view i {
-    float: right;
-    position: relative;
-    top: 20px;
-}
-
 /* ------------- LINKS ----------- */
 
 a:link, a:visited {
@@ -449,6 +443,13 @@ cite {
 .card-text-view ul li {
     padding: 5px 0;
 }
+
+.edit-box {
+    float: right;
+    position: relative;
+    top: 20px;
+}
+
 
 /* ------------- Sign Up Form ----------- */
 
