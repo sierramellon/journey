@@ -53,7 +53,8 @@ $(document).ready(function(){
         '.nav-to-signup': function(element) {
             event.preventDefault();
             // update goal DOM text
-            goal = $("#goal").val();         
+            goal = $("#goal").val();
+            if (!goal) throw "Goal must be entered";  
             $(".goal-info").text(goal);
             // retrieve health information from device
             confirm("Please allow REI Journey to access your health data to provide you with a better exercise plan");
