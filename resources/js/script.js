@@ -10,7 +10,7 @@ $(document).ready(function(){
     /* Getting the AI generated label from server */
     var goal_response_callback = function(data) {
         if (data === "LOADING") {
-            $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
+            $.get("/api/processgoal?goal=" + goal, goal_response_callback);
         } else {
             goal_response = data;
             $(".label-info").text("REI Journey will help you with your concern of " + goal_response);
@@ -58,8 +58,8 @@ $(document).ready(function(){
             // retrieve health information from device
             confirm("Please allow REI Journey to access your health data to provide you with a better exercise plan");
             // retrieve AI label and activity plans from server
-            $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
-            $.get("https://superb-binder-140518.appspot.com/api/getactivities?goal=" + goal, get_activity_response_callback);
+            $.get("/api/processgoal?goal=" + goal, goal_response_callback);
+            $.get("/api/getactivities?goal=" + goal, get_activity_response_callback);
         },
         '.nav-to-home': function() {
             event.preventDefault();
@@ -71,7 +71,7 @@ $(document).ready(function(){
             }
             
             // retrieve user information from server
-            $.get("https://superb-binder-140518.appspot.com/api/userinfo?email=" + email, get_user_info_response_callback);
+            $.get("/api/userinfo?email=" + email, get_user_info_response_callback);
         },
         '.nav-to-weekly-plan': null,
         '.nav-to-daily-plan': function(element) {
