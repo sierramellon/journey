@@ -47,10 +47,6 @@ section {
     padding: 1%;
 }
 
-.hidden {
-    visibility: hidden;
-}
-
 /* ------------- SECTIONS ----------- */
 .section-intro{
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/intro-back.jpg);
@@ -109,7 +105,12 @@ section {
     display: none;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 /* ------------- HEADINGS ----------- */
+
 h2, h3{
     font-weight: 300;
     text-transform:uppercase;
@@ -164,12 +165,14 @@ h3 {
 }
 
 /* ----- PARAGRAPHS ------*/
+
 .box p {
     font-size: 90%;
     line height: 145%;
 }
 
 /* ------------- ICONS ----------- */
+
 .icon-big {
     font-size: 350%;
     color: #e67e22;
@@ -187,13 +190,19 @@ h3 {
     text-align: center;
     font-size: 160%;
     margin-right: 10px;
-    /* secrets to align text and icons */
     line-height: 120%;
     vertical-align: middle;
     margin-top:-2px;
 }
 
+.card-text-view i {
+    float: right;
+    position: relative;
+    top: 20px;
+}
+
 /* ------------- LINKS ----------- */
+
 a:link, a:visited {
     color: #e67e22;
     text-decoration: none;
@@ -209,6 +218,7 @@ a:hover, a:active {
 }
 
 /* ------------- BUTTONS ----------- */
+
 .btn:link, 
 .btn:visited, input[type=submit]{
     display: inline-block;
@@ -252,8 +262,11 @@ input[type=submit]:active {
     color: #fff;
 }
 
-/* ------------- INTRO ----------- */
+.btn-ghost {
+    margin-right: 2%;
+}
 
+/* ------------- INTRO ----------- */
 .intro-text-box {
    position: absolute;
     width: 1140px;
@@ -275,7 +288,6 @@ input[type=submit]:active {
     width: 100%;
     
 }
-
 
 .home-showcase li {
     display: block;
@@ -354,17 +366,24 @@ blockquote{
 
 blockquote:before {
     content: "\201C";
-    font-size: 500%;
+    font-size: 300%;
     display:block;
     position: absolute;
     top: -5px;
     left: -3px;
 }
 
-cite img{
+.profile-img {
     height: 65px;
     width: 65px;
     border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.rei-log-profile {
+    width: 65px;
+    height: auto;
     margin-right: 10px;
     vertical-align: middle;
 }
@@ -373,6 +392,13 @@ cite {
     font-size: 90%;
     margin-top: 25px;
     display: block;
+}
+
+.rei-logo-small {
+    height: 65px;
+    width: 128px;
+    border-radius: 1px;
+   
 }
 
 /* ------------- SIGN UP ----------- */
@@ -385,6 +411,7 @@ cite {
     -webkit-box-shadow: 0 2px 2px #efefef;
     box-shadow: 0 2px 2px #efefef;
     padding: 5px;
+    position: relative;
 }
 
 .card-text-view div {
@@ -423,7 +450,8 @@ cite {
     padding: 5px 0;
 }
 
-/* ------------- Contact Form ----------- */
+/* ------------- Sign Up Form ----------- */
+
 .info-form {
     width:90%;
     margin:0 auto;
@@ -469,25 +497,8 @@ input[type=checkbox] {
     padding-top: 40px;
 }
 
-.form-messages {
-    width: 70%;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 3px;
-    margin-bottom: 30px;
-}
-
-.success {
-    background-color: rgba(62, 221, 62, 0.91);
-}
-
-.error {
-    background-color: rgba(212, 77, 77, 0.95);
-}
-
 
 /* Animations */
-
 .js--wp-1, 
 .js--wp-2 {
     opacity: 0;
@@ -515,28 +526,6 @@ input[type=checkbox] {
 
 .js--delay-1.animated{
     opacity: 1;
-}
-
-.nav-to-view-goal i,  .nav-to-view-goal h3{
-    -webkit-animation-name: shaking;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-duration: 4s;
-    -webkit-animation-iteration-count: infinite;
-    animation-name: shaking;
-    animation-timing-function: ease-in-out;
-    animation-duration: 4s;
-    -webkit-animation-iteration-count: 0;
-    animation-iteration-count: 0;
-}
-
-@-webkit-keyframes shaking {
-    from {-webkit-transform: scale(1.0);transform: scale(1.0);}
-    to {-webkit-transform: scale(1.3);transform: scale(1.3);}
-}
-
-@keyframes shaking {
-    from {-webkit-transform: scale(1.0);transform: scale(1.0);}
-    to {-webkit-transform: scale(1.3);transform: scale(1.3);}
 }
 
 /*----------text over imag------------*/
@@ -573,7 +562,6 @@ input[type=checkbox] {
 
 /*----------overlay color over img------------*/
 
-
 .card-view i {
     position: absolute;
     left: 50%;
@@ -609,7 +597,8 @@ input[type=checkbox] {
     margin-left: 5%;
 }
 
-/*-----------float icons-------------*/
+/*-----------Floating icons-------------*/
+
 .float-left {
     float:left;
 }
@@ -623,7 +612,8 @@ input[type=checkbox] {
 }
 
 
-/*login in page*/
+/*-----------Login in link-------------*/
+
 .login-link {
     width: auto;
     text-align: center;

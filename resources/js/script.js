@@ -56,7 +56,7 @@ $(document).ready(function(){
             goal = $("#goal").val();         
             $(".goal-info").text(goal);
             // retrieve health information from device
-            confirm("Please allow REI Journey to access your health data in order to provide you with a better exercise plan");
+            confirm("Please allow REI Journey to access your health data to provide you with a better exercise plan");
             // retrieve AI label and activity plans from server
             $.get("https://superb-binder-140518.appspot.com/api/processgoal?goal=" + goal, goal_response_callback);
             $.get("https://superb-binder-140518.appspot.com/api/getactivities?goal=" + goal, get_activity_response_callback);
@@ -157,7 +157,7 @@ $(document).ready(function(){
     $('#unchecked-in').click(mark_indoor_finished);   
     $('#checked-in').click(mark_indoor_unfinished);
     
-    // feeback icon on history page
+    // Feeback icons on history page
     var mark_feedback_yes = function() {
         $("#feedback-no").css('display', 'none');
         $("#feedback-yes").css('display', 'block');   
